@@ -12,6 +12,7 @@ export class JokeListComponentComponent {
   constructor(){
     this.jokeList = [new Joke('Que nos diferencia a Christian y a mi?', 'Que Juan Carlos tiene más algoritmia', true),
     new Joke('Porque le gusta tanto a Cayetano Java?', 'Por que le gusta sacar menos nota que Christian y Juan Carlos ', true),
-    new Joke('Porque a Christian no le gusta Dentista?', 'No sabe hacer el Focking Punto de Silla', true)];
+    new Joke('Porque a Christian no le gusta Dentista?', 'No sabe hacer el Focking Punto de Silla',  true)];
+    "Pruebaaa";
   }
 }
