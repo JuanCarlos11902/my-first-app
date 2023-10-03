@@ -1,9 +1,9 @@
 <div class="container">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngFor="let item in jokeList">
-        <div *ngIf="!item.hide">
-        <p>{{item.setup}}</p>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngFor="let item of jokeList">
+        <div *ngIf="item.hide" class="container">
+        <h3>{{item.setup}}</h3>
         <p>{{item.punchline}}</p>
-        <button (click)="item.toggle()" class="btn btn-warning"></button>
         </div>
+        <button (click)="item.toggle()" class="btn btn-warning">Ocultar Broma</button>
     </div>
 </div>
