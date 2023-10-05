@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Joke } from '../joke';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-joke-list-component',
@@ -7,7 +8,7 @@ import { Joke } from '../joke';
   styleUrls: ['./joke-list-component.component.css']
 })
 export class JokeListComponentComponent {
-  jokeList : Joke[];
+  @Input('joke') jokeList : Joke[];
 
   constructor(){
     this.jokeList = [new Joke('A Christian no le gusta Desarrollo de Interfaces', 'Porque sigue sin saber hacer el punto de silla', true),
