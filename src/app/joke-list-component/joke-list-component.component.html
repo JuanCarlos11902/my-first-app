@@ -1,9 +1,2 @@
-<div class="container">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" *ngFor="let item of jokeList">
-        <div *ngIf="item.hide" class="container">
-        <h3>{{item.setup}}</h3>
-        <p>{{item.punchline}}</p>
-        </div>
-        <button (click)="item.toggle()" class="btn btn-warning">{{item.textoBoton}}</button>
-    </div>
-</div>
+<app-formulario-component (jokeCreated)="anadirJoke($event)"></app-formulario-component>
+<app-lista-jokes *ngFor="let joke of jokeList" [joke]=joke></app-lista-jokes>

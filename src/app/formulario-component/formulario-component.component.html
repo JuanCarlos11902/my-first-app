@@ -1,1 +1,10 @@
-<p>formulario-component works!</p>
+<div class="container">
+    <div class="input-group-lg">
+        <input type="text" class="form-control" placeholder="Introduce tu Broma" [(ngModel)]="setupText">
+        <br>
+        <input type="text" class="form-control" placeholder="Introduce tu Punchline" [(ngModel)]="punchlineText">
+        <br>
+        <input type="button" class="btn btn-success btn-block" value="+" (click)="addJoke()">
+    </div>
+
+</div>

@@ -1,3 +1,5 @@
-<ul class="list-group">
-  <li *ngFor="let item of ">{{'joke'}}</li>
-</ul>
+<div class="container">
+  <h2>{{joke.setup}}</h2>
+  <h3 *ngIf="joke.hide">{{joke.punchline}}</h3>
+  <button class="btn btn-primary" (click)="joke.toggle()">{{joke.textoBoton}}</button>
+</div>
