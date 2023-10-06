@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Joke } from '../joke';
 import { Input } from '@angular/core';
+import { Servicio } from '../servicio';
 
 @Component({
   selector: 'app-joke-list-component',
@@ -8,15 +9,11 @@ import { Input } from '@angular/core';
   styleUrls: ['./joke-list-component.component.css']
 })
 export class JokeListComponentComponent {
-  jokeList : Joke[];
+  servicio : Servicio
 
   constructor(){
-    this.jokeList = [new Joke('A Christian no le gusta Desarrollo de Interfaces', 'Porque sigue sin saber hacer el punto de silla', true),
-    new Joke('La bebida favorita de un programador', 'es el JLabel', true),
-    new Joke('Van dos', 'Y se cae el del medio',  true)];
+    this.servicio = new Servicio();
+    }
+
   }
 
-  anadirJoke(joke: {setup: string, punchline: string}){
-    this.jokeList.push(new Joke(joke.setup,joke.punchline,true));
-  }
-}

@@ -1,5 +1,9 @@
 <div class="container">
   <h2>{{joke.setup}}</h2>
-  <h3 *ngIf="joke.hide">{{joke.punchline}}</h3>
+  <h3 *ngIf="!joke.hide">{{joke.punchline}}</h3>
   <button class="btn btn-primary" (click)="joke.toggle()">{{joke.textoBoton}}</button>
+  <button class="btn btn-danger" (click)="eliminarBroma()">Eliminar Broma</button>
+  <button class="btn btn-warning" (click)="toggleEditar()">Editar Broma</button>
+    <app-formulario-component *ngIf="editarPulsado" (jokeCreated)="(joke.editarBroma($event))"></app-formulario-component>
+  
 </div>

@@ -1,2 +1,2 @@
-<app-formulario-component (jokeCreated)="anadirJoke($event)"></app-formulario-component>
-<app-lista-jokes *ngFor="let joke of jokeList" [joke]=joke></app-lista-jokes>
+<app-formulario-component (jokeCreated)="servicio.anadirJoke($event)"></app-formulario-component>
+<app-lista-jokes *ngFor="let joke of servicio.listaJokes" [joke]=joke (eliminar)="servicio.eliminarJoke(joke)"></app-lista-jokes>

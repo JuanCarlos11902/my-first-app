@@ -9,18 +9,22 @@ export class Joke {
         this.setup = setup;
         this.punchline = punchline;
         this.hide = hide;
-        this.textoBoton = "Ocultar Broma";
+        this.textoBoton = "Ver Broma";
     }
 
     toggle(){
         this.hide = !this.hide;
         if (!this.hide) {
-            this.textoBoton = "Ver Broma";
-        }
-        else{
             this.textoBoton = "Ocultar Broma";
         }
+        else{
+            this.textoBoton = "Ver Broma";
+        }
     }
-
-
+    
+    editarBroma(jokeEditar : {setup: string, punchline: string}){
+        this.setup = jokeEditar.setup;
+        this.punchline = jokeEditar.punchline;
+      }
+    
 }

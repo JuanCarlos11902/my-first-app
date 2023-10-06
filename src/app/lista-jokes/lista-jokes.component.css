@@ -3,3 +3,9 @@ div{
     margin-bottom: 10px;
     padding-bottom: 10px;
 }
+button{
+    margin-right: 10px;
+}
+.container{
+    box-shadow: -0px -0px 7px 3px black;
+}

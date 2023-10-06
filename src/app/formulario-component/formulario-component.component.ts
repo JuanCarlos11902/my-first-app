@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-formulario-component',
@@ -7,8 +7,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class FormularioComponentComponent {
   @Output() jokeCreated = new EventEmitter<{setup:string, punchline: string}>
-  setupText: string = '';
-  punchlineText: string = '';
+  @Input() setupText: string = '';
+  @Input() punchlineText: string = '';
 
   addJoke(){
     this.jokeCreated.emit({setup: this.setupText, punchline: this.punchlineText});
