@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Joke } from '../joke';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-joke-list-component',
@@ -10,9 +11,12 @@ export class JokeListComponentComponent {
   jokeList : Joke[];
 
   constructor(){
-    this.jokeList = [new Joke('Que nos diferencia a Christian y a mi?', 'Que Juan Carlos tiene más algoritmia', true),
-    new Joke('Porque le gusta tanto a Cayetano Java?', 'Por que le gusta sacar menos nota que Christian y Juan Carlos ', true),
-    new Joke('Porque a Christian no le gusta Dentista?', 'No sabe hacer el Focking Punto de Silla',  true)];
-    "Quiero traerme la prueba";
+    this.jokeList = [new Joke('A Christian no le gusta Desarrollo de Interfaces', 'Porque sigue sin saber hacer el punto de silla', true),
+    new Joke('La bebida favorita de un programador', 'es el JLabel', true),
+    new Joke('Van dos', 'Y se cae el del medio',  true)];
+  }
+
+  anadirJoke(joke: {setup: string, punchline: string}){
+    this.jokeList.push(new Joke(joke.setup,joke.punchline,true));
   }
 }
