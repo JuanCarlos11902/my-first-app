@@ -2,12 +2,16 @@ import { Joke } from "./joke";
 
 export class Servicio {
 
-    listaJokes : Joke[];
+    private listaJokes : Joke[];
 
     constructor(){
         this.listaJokes = [new Joke('A Christian no le gusta Desarrollo de Interfaces', 'Porque sigue sin saber hacer el punto de silla', true),
         new Joke('La bebida favorita de un programador', 'es el JLabel', true),
         new Joke('Van dos', 'Y se cae el del medio',  true)];
+    }
+
+    getBromas(){
+      return [... this.listaJokes];
     }
 
     anadirJoke(joke: {setup: string, punchline: string}){

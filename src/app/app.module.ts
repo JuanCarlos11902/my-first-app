@@ -7,12 +7,14 @@ import { FormularioComponentComponent } from './formulario-component/formulario-
 import { ListaJokesComponent } from './lista-jokes/lista-jokes.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     JokeListComponentComponent,
     FormularioComponentComponent,
     ListaJokesComponent
+    
   ],
   imports: [
     BrowserModule,
